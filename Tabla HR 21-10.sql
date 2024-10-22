@@ -1,7 +1,8 @@
+-- Borrar Tabla ya existente de "Empleados"
 IF OBJECT_ID('Empleados', 'U') IS NOT NULL
     DROP TABLE Empleados;
 
-
+-- Crear Tabla "Empleados" con Nombre, Puesto, Fecha de contratación y Salario
 CREATE TABLE Empleados (
     ID INT PRIMARY KEY,
     Nombre NVARCHAR(100),
@@ -10,11 +11,11 @@ CREATE TABLE Empleados (
     Salario DECIMAL(10, 2)
 );
 
-
+-- Insertar empleado N°1
 INSERT INTO Empleados (ID, Nombre, Puesto, FechaContratacion, Salario)
 VALUES (1, N'Juan Pérez', N'Analista', '2023-05-10', 45000.00);
 
-
+-- Insertar empleados 2, 3 y 4
 INSERT INTO Empleados (ID, Nombre, Puesto, FechaContratacion, Salario)
 VALUES
 (2, N'María Gómez', N'Gerente', '2020-01-15', 60000.00),
